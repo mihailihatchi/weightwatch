@@ -1,0 +1,16 @@
+require 'test_helper'
+
+class WeightTest < ActiveSupport::TestCase
+  # Replace this with your real tests.
+  def test_get_all
+    @weights= Weight.all
+    assert_not_nil @weights
+  end
+  def test_find_for_user
+    user_id=1
+
+    @weights =Weight.find_for_user(user_id)
+      assert_equal @weights.length, 2
+
+  end
+end

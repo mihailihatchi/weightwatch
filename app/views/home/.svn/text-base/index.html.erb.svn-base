@@ -1,0 +1,17 @@
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Weights: <%= controller.action_name %></title>
+    <%= stylesheet_link_tag 'scaffold' ,'ww' %>
+  </head>
+  <body >
+    
+
+    <h1>Weight loosing application</h1>
+
+    <%= render(:partial=>"/layouts/menu") %>
+   
+  </body>
+
+</html>

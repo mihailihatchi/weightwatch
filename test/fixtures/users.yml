@@ -1,0 +1,16 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  username: dave
+  password: secret
+
+two:
+  id: 2
+  username: Laura
+  password: MyString
+admin:
+  id: 3
+  username: admin
+  password: admin
+  role: admin

@@ -1,0 +1,34 @@
+
+
+<h1>List of trainings performed by users</h1>
+
+
+
+
+<table cellpadding="0" cellspacing="0">
+  <% unless @trainings.empty? %>
+    <tr>
+      <th class="tableHeader">Type</th>
+      <th class="tableHeader">Description</th>
+      <th class="tableHeader">Duration</th>
+      <th class="tableHeader">Date</th>
+      <th class="tableHeader" colspan="3">Actions</th>
+    </tr>
+  <% end %>
+
+  <% @trainings.each do |training| %>
+    <tr class="<%= cycle('list-line-odd', 'list-line-even')%>">
+      <td class="datatable"><%=h training.training_type %></td>
+      <td class="datatable"><%=h training.description %></td>
+      <td class="datatable" style="text-align: center""><%=h training.duration %></td>
+      <td class="datatable" style="text-align: center""><%=h training.training_date %></td>
+      <td class="actionCol"><%= link_to 'Show', training %></td>
+      <td class="actionCol"><%= link_to 'Edit', edit_training_path(training) %></td>
+      <td class="actionCol"><%= link_to 'Delete', training, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to 'New training', new_training_path %>

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Login : <%= controller.action_name %></title>
+    <%= stylesheet_link_tag 'scaffold' ,'ww' %>
+
+  </head>
+  <body>
+    <div class="form">
+      <h1><font color="fuchsia" style="font-size:20pt;font-weight: bold;font-family:Courrier">Welcome to weightwatch</font></h1>
+      <fieldset>
+        <legend>Please Log In</legend>
+
+        <% form_tag do %>
+          <p>
+            <label for="name">Name:</label>
+            <%= text_field_tag :name, params[:name] %>
+          </p>
+
+          <p>
+            <label for="password">Password:</label>
+            <%= password_field_tag :password, params[:password] %>
+          </p>
+
+          <p>
+            <%= submit_tag "Login" %>
+          </p>
+        <% end %>
+      </fieldset>
+      <% if flash[:notice] %>
+      <div id="notice"><%=flash[:notice]%></div>
+      <% end %>
+    </div>
+  </body>
+</html>

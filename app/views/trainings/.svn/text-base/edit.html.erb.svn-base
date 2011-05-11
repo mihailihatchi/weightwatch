@@ -1,0 +1,37 @@
+<h1>Edit training</h1>
+
+<% form_for(@training) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :training_type %><br />
+    <%= f.select :training_type ,Training::TRAINING_TYPES,:prompt =>"Select a training type" %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :duration %><br />
+    <%= f.text_field :duration %>
+  </p>
+  <p>
+    <%= f.label :calories %><br />
+    <%= f.text_field :calories %>
+  </p>
+  <p>
+    <%= f.label :training_date %><br />
+    <%= f.datetime_select :training_date %>
+  </p>
+
+  <p>
+    <label for="user">User :</label><br/>
+    <%= @user.username
+    
+  %>
+  </p>
+  <p>
+    <%= f.submit 'Edit' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', trainings_path %>

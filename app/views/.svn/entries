@@ -1,0 +1,49 @@
+10
+
+dir
+36
+svn://desktop/Weightwatch/app/views
+svn://desktop
+
+
+
+2011-03-30T22:50:42.996925Z
+36
+edi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5a3e727c-6034-3e4d-bbb8-329cef63837f
+
+layouts
+dir
+
+users
+dir
+
+home
+dir
+
+login
+dir
+
+weights
+dir
+
+calorie_intakes
+dir
+
+trainings
+dir
+

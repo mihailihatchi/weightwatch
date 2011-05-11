@@ -1,0 +1,49 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+obese:
+  weight: 120
+  id: 200
+  user_id: 1
+  weighting_date: 2009-01-01
+
+# column: value
+#
+fat:
+  weight: 112
+  id: 400
+  user_id: 1
+  weighting_date: 2011-01-01
+
+ 
+
+normal:
+  weight: 90
+  id: 500
+  user_id: 2
+
+<<<<<<< .mine
+recent:
+  weight: 120
+  id: 510
+  user_id: 1
+  weighting_date: 2011-03-01
+  
+old:
+   weight: 140
+   id: 410
+   user_id: 3
+   weighting_date: 2011-01-01
+=======
+recent:
+  weight: 90
+  id: 540
+  user_id: 1
+  weighting_date: 2011-03-03
+
+>>>>>>> .r33
+
+

@@ -1,0 +1,24 @@
+<p>
+  <b>User:</b>
+  <%= h @weight.user.username unless  @weight.user==nil %>
+
+</p>
+
+<p>
+  <b>Weight:</b>
+  <%=h @weight.weight %>
+</p>
+
+<p>
+  <b>Id:</b>
+  <%=h @weight.id %>
+</p>
+
+<p>
+  <b>Weighting date:</b>
+  <%=h @weight.weighting_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_weight_path(@weight) %> |
+<%= link_to 'Back', weights_path %>

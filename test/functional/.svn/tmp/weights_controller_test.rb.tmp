@@ -1,0 +1,64 @@
+require 'test_helper'
+
+
+class WeightsControllerTest < ActionController::TestCase
+  def setup
+    session[:user_id]=1
+  end
+  
+  test "should get index regular user" do
+    get :index
+    assert_response :success
+    assert_not_nil assigns(:weights)
+    assert_equal assigns(:weights).size ,1
+  end
+test "should get index admin" do
+  #we configure the user role to be admin
+    session[:user_role]='admin'
+    get :index
+    assert_response :success
+    assert_not_nil assigns(:weights)
+<<<<<<< .mine
+    assert_equal assigns(:weights).size ,5
+=======
+    assert_equal assigns(:weights).size ,4
+>>>>>>> .r33
+  end
+  test "should get new" do
+    get :new
+    assert_response :success
+  end
+
+  test "should create weight" do
+    assert_difference('Weight.count') do
+      post :create, :weight => {:weight=>'100',:user_id=>'1' }
+    end
+
+    assert_redirected_to weight_path(assigns(:weight))
+  end
+
+  test "should show weight" do
+    get :show, :id => weights(:obese).to_param
+    assert(:users!=nil)
+    assert_response :success
+    
+  end
+
+  test "should get edit" do
+    get :edit, :id => weights(:obese).to_param
+    assert_response :success
+  end
+
+  test "should update weight" do
+    put :update, :id => weights(:obese).to_param, :weight => { }
+    assert_redirected_to weight_path(assigns(:weight))
+  end
+
+  test "should destroy weight" do
+    assert_difference('Weight.count', -1) do
+      delete :destroy, :id => weights(:obese).to_param
+    end
+
+    assert_redirected_to weights_path
+  end
+end

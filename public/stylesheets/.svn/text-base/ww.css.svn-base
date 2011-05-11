@@ -1,0 +1,47 @@
+/* 
+    Document   : ww
+    Created on : Dec 5, 2010, 3:43:01 PM
+    Author     : edi
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+th.tableHeader{
+    background-color: #a8ffff;
+    color:#ff000f;
+    padding: 2px;
+
+}
+div.form{
+
+    color :#f0f0f0;
+    background-color: #a8b0f0
+}
+
+td.actionCol{
+    padding-left: 3px;
+    padding: 2px;
+}
+table.datatable{
+    padding:2px;
+    
+    
+}
+td.datatable{
+    padding:2px;
+
+}
+
+
+.list-line-even {
+  background:   #e0f8f8;
+}
+
+.list-line-odd {
+  background:   #a8b0f0;
+}

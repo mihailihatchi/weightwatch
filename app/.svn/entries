@@ -1,0 +1,40 @@
+10
+
+dir
+36
+svn://desktop/Weightwatch/app
+svn://desktop
+
+
+
+2011-03-30T22:50:42.996925Z
+36
+edi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5a3e727c-6034-3e4d-bbb8-329cef63837f
+
+helpers
+dir
+
+models
+dir
+
+controllers
+dir
+
+views
+dir
+

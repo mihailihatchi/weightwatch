@@ -1,0 +1,7 @@
+<div id="current_user" style="float:right;">
+  <%="You are logged in as  :"+ @logged_user.username if @logged_user %>
+  <br>
+  <%="Your role is  :"+ @logged_user.role if (@logged_user and @logged_user.role) %>
+  <br>
+  <%=link_to "Logout","/login/login"%>
+</div>

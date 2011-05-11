@@ -1,0 +1,28 @@
+<h1>Listing calorie_intakes</h1>
+
+<table cellpadding="0" cellspacing="0" class="datatable">
+  <% unless @calorie_intakes.empty? %>
+    <tr>
+      <th class="tableHeader">Description</th>
+      <th class="tableHeader">Calorie intake</th>
+      <th class="tableHeader">Date</th>
+      <th class="tableHeader">User</th>
+      <th class="tableHeader" colspan="3">Actions</th>
+    </tr>
+  <% end  %>
+  <% @calorie_intakes.each do |calorie_intake| %>
+    <tr class="<%= cycle('list-line-odd', 'list-line-even')%>">
+      <td class="datatable"><%=h calorie_intake.description %></td>
+      <td class="datatable"><%=h calorie_intake.calorie_intake %></td>
+      <td class="datatable"><%=h calorie_intake.date %></td>
+      <td class="datatable"><%=h calorie_intake.user.username unless calorie_intake.user ==nil %></td>
+      <td class="actionCol"><%= link_to 'Show', calorie_intake %></td>
+      <td class="actionCol"><%= link_to 'Edit', edit_calorie_intake_path(calorie_intake) %></td>
+      <td class="actionCol"><%= link_to 'Delete', calorie_intake, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to 'New calorie_intake', new_calorie_intake_path %>

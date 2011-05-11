@@ -1,0 +1,26 @@
+<h1>New weight</h1>
+
+<% form_for(@weight) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :weight %><br />
+    <%= f.text_field :weight %>
+  </p>
+  
+  <p>
+    <%= f.label :weighting_date %><br />
+    <%= f.date_select :weighting_date %>
+  </p>
+   <p>
+     <label for="user">User :</label><br/>
+        <%= @user.username
+          #select("weight", "user_id", @users.collect {|u| [ u.username, u.id ] })
+        %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', weights_path %>

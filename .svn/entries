@@ -1,0 +1,135 @@
+10
+
+dir
+36
+svn://desktop/Weightwatch
+svn://desktop
+
+
+
+2011-03-30T22:50:42.996925Z
+36
+edi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5a3e727c-6034-3e4d-bbb8-329cef63837f
+
+test
+dir
+
+app
+dir
+
+log
+dir
+
+Rakefile
+file
+
+
+
+
+2011-01-28T19:11:47.502843Z
+17f2f134da4cd31ea095d5868ca89e86
+2010-12-29T12:54:05.820940Z
+2
+edi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+307
+
+db
+dir
+
+nbproject
+dir
+
+spec
+dir
+
+vendor
+dir
+
+README
+file
+
+
+
+
+2011-01-28T19:11:47.502843Z
+a58e68a7599c976f071d5b9c6fa67fb3
+2010-12-29T12:54:05.820940Z
+2
+edi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10011
+
+tmp
+dir
+
+script
+dir
+
+config
+dir
+
+doc
+dir
+
+lib
+dir
+
+public
+dir
+

@@ -1,0 +1,24 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  description: 
+  calorie_intake: 
+  date: 2010-12-05 00:58:32
+  user_id: 1
+
+two:
+  description: 
+  calorie_intake: 
+  date: 2010-12-05 20:58:32
+  user_id: 2
+
+three:
+  description:
+  calorie_intake:
+  date: 2010-12-05 10:28:32
+  user_id: 2
+recent:
+  description:
+  calorie_intake:
+  date: 2011-03-05 10:28:32
+  user_id: 1

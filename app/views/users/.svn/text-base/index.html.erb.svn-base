@@ -1,0 +1,24 @@
+<h1>Listing users</h1>
+
+<table class="datatable" cellpadding="0" cellspacing="0">
+  <% unless @users.empty? %>
+    <tr>
+      <th class="tableHeader">Username</th>
+      <% if session[:user_role]=='admin' %><th class="tableHeader">Password</th><% end %>
+      <th class="tableHeader" colspan="3">Actions</th>
+    </tr>
+  <% end %>
+  <% @users.each do |user| %>
+    <tr class="<%= cycle('list-line-odd', 'list-line-even')%>">
+      <td class="datatable"><%=h user.username %></td>
+      <% if session[:user_role]=='admin' %>   <td class="datatable"><%=h user.password   %></td><% end %>
+      <td class="actionCol"><%= link_to 'Show', user %></td>
+       <% if session[:user_role]=='admin' %><td class="actionCol"><%= link_to 'Edit', edit_user_path(user) %></td><% end %>
+       <% if session[:user_role]=='admin' %><td class="actionCol"><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td><% end %>
+    </tr>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to 'New user', new_user_path %>

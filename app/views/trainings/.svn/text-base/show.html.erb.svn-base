@@ -1,0 +1,12 @@
+<h1>Training info</h1>
+
+<table>
+  <tr><td><b>Training type:</b></td><td><%=h @training.training_type %></td></tr>
+  <tr><td><b>Training duration:</b></td><td><%=h @training.duration %> minutes</td></tr>
+  <tr><td><b>Calories:</b></td><td><%=h @training.calories %> calories</td></tr>
+  <tr><td><b>Description:</b></td><td><%=h @training.description %> </td></tr>
+  <tr><td><b>Date of training:</b></td><td><%=h @training.training_date %></td></tr>
+</table>
+<%= link_to "Back to trainings", trainings_path %>
+
+

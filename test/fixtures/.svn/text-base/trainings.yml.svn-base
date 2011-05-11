@@ -1,0 +1,24 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  training_type: cardio
+  description: tura cu bike-ul
+  duration: 10
+  user_id: 1
+  calories: 1
+
+two:
+  id: 2
+  training_type: forta
+  description: tras de fiare
+  duration: 5
+  user_id: 1
+  calories: 1
+three:
+  id: 3
+  training_type: forta
+  description: tras de fiare
+  duration: 5
+  user_id: 2
+  calories: 1

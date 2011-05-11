@@ -1,0 +1,43 @@
+require 'test_helper'
+
+class TrainingTest < ActiveSupport::TestCase
+  # Replace this with your real tests.
+  test "loadAll" do
+    @trainings=    Training.all
+    assert_not_nil(@trainings)
+    @trainings.each { |training| puts training.duration}
+  end
+  test "save with bad training" do
+    @training = Training.new;
+    # test saving with a bad training
+    assert  !@training.save
+  end
+  test "save with good training" do
+    @training = Training.new;
+    @training.calories=100
+    @training.description='test training'
+    @training.duration=10
+    @training.training_type='cardio'
+    @training.training_date=Time.new
+    # test saving with a bad training
+    assert  @training.save
+    @trainings=Training.find(:all, :conditions => 'calories=100')
+    assert_equal @trainings.size, 1
+    @training_returned=@trainings.first
+    puts @training.training_date
+  end
+
+  test "find a traininng" do
+    @training =Training.find(1)
+    puts @training.description
+  end
+  ## test find by user
+  def test_find_by_user
+    user_id=1
+    @trainings = Training.find_for_user(user_id)
+    assert_not_nil @trainings
+    assert_equal @trainings.size ,  2
+    
+  end
+
+end

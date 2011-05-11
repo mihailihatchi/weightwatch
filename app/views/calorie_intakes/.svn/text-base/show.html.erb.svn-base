@@ -1,0 +1,25 @@
+<p>
+  <b>Description:</b>
+  <%=h @calorie_intake.description %>
+</p>
+
+<p>
+  <b>Calorie intake:</b>
+  <%=h @calorie_intake.calorie_intake %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%=h @calorie_intake.date %>
+</p>
+<p>
+
+  <b>User</b>
+<%=h @calorie_intake.user.username unless @calorie_intake.user ==nil %>
+
+
+</p>
+
+
+<%= link_to 'Edit', edit_calorie_intake_path(@calorie_intake) %> |
+<%= link_to 'Back', calorie_intakes_path %>

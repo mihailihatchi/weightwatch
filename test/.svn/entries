@@ -1,0 +1,77 @@
+10
+
+dir
+36
+svn://desktop/Weightwatch/test
+svn://desktop
+
+
+
+2011-03-16T21:41:32.728086Z
+33
+edi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5a3e727c-6034-3e4d-bbb8-329cef63837f
+
+unit
+dir
+
+test_helper.rb
+file
+
+
+
+
+2011-01-28T19:11:47.212842Z
+e297614c72684d065aef001f86188732
+2010-12-29T12:54:05.820940Z
+2
+edi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1800
+
+performance
+dir
+
+functional
+dir
+
+integration
+dir
+
+fixtures
+dir
+

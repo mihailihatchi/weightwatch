@@ -1,0 +1,29 @@
+<div id="weights_list">
+<h1>Listing weights</h1>
+
+<table cellpadding="0" cellspacing="0" class="datatable">
+  <% unless @weights.empty? %>
+  <tr>
+    <th class="tableHeader">Weight</th>    
+    <th class="tableHeader">Weighting date</th>
+    <th class="tableHeader">User </th>
+    <th class="tableHeader" colspan="3">Actions</th>
+  </tr>
+<% end %>
+<% @weights.each do |weight| %>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <td class="datatable""><%=h weight.weight %></td>
+    <!--td><%=h weight.id %></td-->
+    <td class="datatable"><%=h weight.weighting_date %></td>
+    <td class="datatable"><%=h weight.user.username unless weight.user==nil %></td>
+    <td class="actionCol"><%= link_to 'Show', weight %></td>
+    <td class="actionCol"><%= link_to 'Edit', edit_weight_path(weight) %></td>
+    <td class="actionCol"><%= link_to 'Destroy', weight, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<img src="<%=@weights_chart%>"/>
+<br />
+
+<%= link_to 'New weight', new_weight_path %>
+</div
