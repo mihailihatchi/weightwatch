@@ -70,6 +70,7 @@ class WeightsController < ApplicationController
 
     @time_labels = [min_date_format,intermediary1_format,intermediary2_format,max_date_format]
     @weight_labels=[@min_weight,@min_weight+(@diff/5),@min_weight+(2*@diff)/5,@min_weight+(3*@diff)/5,@min_weight+(4*@diff)/5,@max_weight]
+    
     @weights_chart=Gchart.line :title=>"Weights evolution",
       :title_size => 30,
       :data=>@hacked_data,
