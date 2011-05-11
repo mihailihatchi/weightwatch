@@ -1,0 +1,6 @@
+source "http://rubygems.org"
+gem "nokogiri"
+gem "rack", "~>1.1"
+gem "rspec", :require => "spec"
+gem "goooglechart"
+gem "rails",:version=>"2.3.8"
