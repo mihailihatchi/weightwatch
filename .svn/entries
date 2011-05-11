@@ -10,8 +10,8 @@ svn://desktop
 2011-03-30T22:50:42.996925Z
 36
 edi
-
-
+has-props
+has-prop-mods
 
 
 
@@ -78,9 +78,6 @@ dir
 spec
 dir
 
-vendor
-dir
-
 README
 file
 
@@ -115,16 +112,19 @@ edi
 
 10011
 
+vendor
+dir
+
 tmp
 dir
 
 script
 dir
 
-config
+doc
 dir
 
-doc
+config
 dir
 
 lib
