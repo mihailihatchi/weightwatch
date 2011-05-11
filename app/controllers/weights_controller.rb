@@ -1,4 +1,4 @@
-require 'gchart'
+#require 'gchart'
 class WeightsController < ApplicationController
   before_filter :authorize
  
