@@ -14,7 +14,7 @@ class WeightsController < ApplicationController
       start_date=start_date-ONE_MONTH
       end_date =Time.now
       @weights = Weight.find_for_user_for_interval session[:user_id],start_date,end_date
-      create_chart
+      create_chart unless @weights==nil
     end
     
 
