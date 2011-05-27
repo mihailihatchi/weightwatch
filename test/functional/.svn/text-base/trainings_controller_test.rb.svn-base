@@ -12,7 +12,7 @@ class TrainingsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_not_nil assigns(:trainings)
-    assert_equal assigns(:trainings).size ,2
+    assert_equal assigns(:trainings).size ,3
   end
   test "new" do
     get :new
@@ -35,7 +35,7 @@ class TrainingsControllerTest < ActionController::TestCase
 
   test "delete" do
     assert_difference('Training.count', -1) do
-      delete :delete, :id => trainings(:one).to_param
+      delete :destroy, :id => trainings(:one).to_param
     end
   end
   test "update" do

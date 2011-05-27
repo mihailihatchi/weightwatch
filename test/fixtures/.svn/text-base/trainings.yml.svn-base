@@ -22,3 +22,11 @@ three:
   duration: 5
   user_id: 2
   calories: 1
+recent:
+  id: 4
+  training_type: forta
+  description: tras de fiare
+  duration: 5
+  user_id: 1
+  calories: 1
+  training_date: 2011-02-23

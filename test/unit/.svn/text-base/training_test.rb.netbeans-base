@@ -36,14 +36,8 @@ class TrainingTest < ActiveSupport::TestCase
     user_id=1
     @trainings = Training.find_for_user(user_id)
     assert_not_nil @trainings
-    assert_equal @trainings.size ,  3
+    assert_equal @trainings.size ,  2
     
-  end
-  def test_find_by_user_for_interval
-    user_id =1
-    @trainings = Training.find_for_user_for_interval user_id,Time.local(2011,02,01),Time.local(2011,03,01)
-    assert_not_nil @trainings
-    assert_equal @trainings.size ,  1
   end
 
 end

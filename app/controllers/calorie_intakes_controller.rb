@@ -9,10 +9,10 @@ class CalorieIntakesController < ApplicationController
   end
   def index
     puts session[:username]
-
-    start_date=Time.now
+    Time.zone="Bucharest"
+    start_date=Time.zone.now
     start_date=start_date-ONE_MONTH/2
-    end_date =Time.now
+    end_date =Time.zone.now+ 60*1000
     end_date= end_date
     @calorie_intakes = CalorieIntake.find_for_user_for_interval session[:user_id],start_date,end_date
     

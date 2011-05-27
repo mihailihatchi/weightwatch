@@ -9,7 +9,7 @@ class CalorieIntakesControllerTest < ActionController::TestCase
     assert_response :success
     assert_not_nil assigns(:calorie_intakes)
     
-    #assert_equal(assigns(:calorie_intakes).size ,1)
+    assert_equal(assigns(:calorie_intakes).size ,1)
   end
 
   test "should get new" do

@@ -1,14 +1,14 @@
 10
 
 dir
-36
+47
 svn://desktop/Weightwatch
 svn://desktop
 
 
 
-2011-03-30T22:50:42.996925Z
-36
+2011-05-27T20:30:14.064497Z
+47
 edi
 has-props
 has-prop-mods
@@ -115,6 +115,40 @@ edi
 vendor
 dir
 
+Gemfile.lock
+file
+50
+
+
+
+2011-05-11T14:43:48.164337Z
+d0840cdb0bed377dba58afe9263b6c06
+2011-05-27T20:32:07.518986Z
+50
+edi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+635
+
 tmp
 dir
 
@@ -129,6 +163,40 @@ dir
 
 lib
 dir
+
+Gemfile
+file
+49
+
+
+
+2011-05-11T14:43:44.634262Z
+0eacc0000ac6211424fe16817ef39f73
+2011-05-27T20:31:58.447467Z
+49
+edi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+88
 
 public
 dir

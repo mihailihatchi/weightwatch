@@ -14,4 +14,8 @@ class Weight < ActiveRecord::Base
     
     return self.find :all,:conditions => "user_id=#{user_id} and  weighting_date between '#{start_date_format}' and '#{end_date_format}'",:order=>'weighting_date'
   end
+
+  def <=>(other)
+    self.weight <=> other.weight
+  end
 end

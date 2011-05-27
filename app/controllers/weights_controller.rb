@@ -11,7 +11,7 @@ class WeightsController < ApplicationController
       @weights = Weight.all
     else
       start_date=Time.now
-      start_date=start_date-ONE_MONTH
+      start_date=start_date- 12*ONE_MONTH
       end_date =Time.now
       @weights = Weight.find_for_user_for_interval session[:user_id],start_date,end_date
       create_chart unless (@weights==nil or @weights.empty?)
@@ -51,16 +51,17 @@ class WeightsController < ApplicationController
     @time_labels=[]
     @weights.each{  |weight|  @data.push(weight.weight.to_f)}
     @weights.each{  |weight|  @time_labels.push(weight.weighting_date)}
-    @max_weight=@data.max
+    @max_weight=@data.max unless @data==nil
 
-    @min_weight=@data.min
-
+    @min_weight=@data.min unless @data==nil
+    @max_weight=0 if @max_weight==nil
+    @min_weight=0 if @min_weight==nil
     @diff =@max_weight-@min_weight
     @hacked_data=[]
     @data.each {|d| @hacked_data.push(d-@min_weight) }
     min_date = @time_labels.min
     max_date =@time_labels.max
-    diff_date = max_date-min_date
+    diff_date = max_date-min_date unless max_date ==nil and min_date==nil
     format = ApplicationHelper::Entity.format
     #start_date_format = start_date.strftime format
     min_date_format=min_date.strftime format

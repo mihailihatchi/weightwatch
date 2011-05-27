@@ -22,7 +22,9 @@
   </tr>
 <% end %>
 </table>
+<%  if @weights_chart!=nil %>
 <img src="<%=@weights_chart%>"/>
+<% end  %>
 <br />
 
 <%= link_to 'New weight', new_weight_path %>
