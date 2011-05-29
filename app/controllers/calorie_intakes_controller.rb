@@ -25,10 +25,8 @@ class CalorieIntakesController < ApplicationController
 
   # GET /calorie_intakes/1
   # GET /calorie_intakes/1.xml
-  def show
-    
+  def show    
     @calorie_intake = CalorieIntake.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @calorie_intake }
@@ -59,7 +57,6 @@ class CalorieIntakesController < ApplicationController
     @calorie_intake = CalorieIntake.new(params[:calorie_intake])
     @user = User.find session[:user_id] unless session[:user_id]==nil
     @calorie_intake.user=@user
-
     respond_to do |format|
       if @calorie_intake.save
         format.html { redirect_to(@calorie_intake, :notice => 'CalorieIntake was successfully created.') }
@@ -92,7 +89,6 @@ class CalorieIntakesController < ApplicationController
   def destroy
     @calorie_intake = CalorieIntake.find(params[:id])
     @calorie_intake.destroy
-
     respond_to do |format|
       format.html { redirect_to(calorie_intakes_url) }
       format.xml  { head :ok }

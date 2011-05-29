@@ -1,17 +1,16 @@
 require 'training'
 class TrainingsController < ApplicationController
-    before_filter :authorize
-
+  before_filter :authorize
   def index
     logger.info 'loading trainings ..'
     @trainings= Training.find_for_user session[:user_id]
-      respond_to do |format|
+    respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @trainings }
-      end
+    end
     logger.info 'trainings loaded'
   end
- def create
+  def create
     @training = Training.new(params[:training])
     @user= User.find session[:user_id] unless session[:user_id]==nil
     @training.user=@user
@@ -28,7 +27,7 @@ class TrainingsController < ApplicationController
         format.xml  { render :xml => @training.errors, :status => :unprocessable_entity }
       end
     end
- end
+  end
   def new
     @users= User.all
     @training =Training.new
@@ -51,13 +50,11 @@ class TrainingsController < ApplicationController
       format.xml  { render :xml => @training }
     end
   end
-#this method is called on
-#get to the edit form
+  #this method is called on
+  #get to the edit form
   def edit
-     
-
-     @training = Training.find(params[:id])
-     @user= User.find @training.user_id
+    @training = Training.find(params[:id])
+    @user= User.find @training.user_id
   end
   def update
     @training = Training.find(params[:id])
@@ -72,5 +69,4 @@ class TrainingsController < ApplicationController
       end
     end
   end
-
 end

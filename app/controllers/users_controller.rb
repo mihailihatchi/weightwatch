@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
-before_filter :authorize
+  before_filter :authorize
   def index
     @users = User.all
     respond_to do |format|
@@ -19,8 +19,7 @@ before_filter :authorize
       format.xml  { render :xml => @user }
     end
   end
-
-  # GET /users/new
+  ## GET /users/new
   # GET /users/new.xml
   def new
     @user = User.new
@@ -49,12 +48,10 @@ before_filter :authorize
       end
     end
   end
-
   # PUT /users/1
   # PUT /users/1.xml
   def update
     @user = User.find(params[:id])
-
     respond_to do |format|
       if @user.update_attributes(params[:user])
         format.html { redirect_to(@user, :notice => 'User was successfully updated.') }
@@ -65,7 +62,6 @@ before_filter :authorize
       end
     end
   end
-
   # DELETE /users/1
   # DELETE /users/1.xml
   def destroy
