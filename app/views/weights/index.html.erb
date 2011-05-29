@@ -1,3 +1,9 @@
+<%  if @weights_chart!=nil %>
+<img src="<%=@weights_chart%>"/>
+<% end  %>
+<br />
+
+<%= link_to 'New weight', new_weight_path %>
 <div id="weights_list">
 <h1>Listing weights</h1>
 
@@ -22,10 +28,6 @@
   </tr>
 <% end %>
 </table>
-<%  if @weights_chart!=nil %>
-<img src="<%=@weights_chart%>"/>
-<% end  %>
-<br />
 
-<%= link_to 'New weight', new_weight_path %>
+
 </div
