@@ -12,6 +12,7 @@ GEM
       activesupport (= 2.3.8)
     activesupport (2.3.8)
     googlecharts (1.6.1)
+    mysql (2.8.1)
     rack (1.1.2)
     rails (2.3.8)
       actionmailer (= 2.3.8)
@@ -27,5 +28,6 @@ PLATFORMS
 
 DEPENDENCIES
   googlecharts
+  mysql
   rack (~> 1.1)
   rails (= 2.3.8)
