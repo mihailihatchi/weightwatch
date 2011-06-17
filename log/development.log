@@ -11996,3 +11996,77 @@ Rendered login/_current_user.rhtml (0.3ms)
 Rendered layouts/_menu.rhtml (1.7ms)
 Rendered weights/index.html.erb within layouts/weights (21.0ms)
 Completed 200 OK in 78ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 78.96.200.133 at Fri Jun 17 10:40:50 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` IS NULL) LIMIT 1[0m
+Redirected to http://92.81.126.229:3000/login/login
+Completed 302 Found in 6ms
+
+
+Started GET "/login/login" for 78.96.200.133 at Fri Jun 17 10:40:55 +0300 2011
+  Processing by LoginController#login as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_login_login_html_erb___701889973_69905487826860_0 at /home/mihai/projects/weightwatch/app/views/login/login.html.erb:17)
+Rendered login/login.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 41ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login/login" for 78.96.200.133 at Fri Jun 17 10:44:15 +0300 2011
+  Processing by LoginController#login as HTML
+  Parameters: {"name"=>"edi", "commit"=>"Login", "authenticity_token"=>"TOzRMlIeDQRRbgengJXCr9cySGnvIgTmohUySadFuIg=", "utf8"=>"✓", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`username` = 'edi') LIMIT 1
+Redirected to http://92.81.126.229:3000/home
+Completed 302 Found in 9ms
+
+
+Started GET "/home" for 78.96.200.133 at Fri Jun 17 10:44:20 +0300 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.8ms)
+Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 47ms (Views: 6.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/weights" for 78.96.200.133 at Fri Jun 17 11:19:37 +0300 2011
+  Processing by WeightsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mWeight Load (0.1ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.7ms)
+Rendered weights/index.html.erb within layouts/weights (50.9ms)
+Completed 200 OK in 72ms (Views: 52.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/weights?page=2" for 78.96.200.133 at Fri Jun 17 13:17:30 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mWeight Load (0.1ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Rendered login/_current_user.rhtml (0.9ms)
+Rendered layouts/_menu.rhtml (38.1ms)
+Rendered weights/index.html.erb within layouts/weights (55.1ms)
+Completed 200 OK in 77ms (Views: 56.7ms | ActiveRecord: 0.2ms)
