@@ -1,6 +1,8 @@
 #require 'gchart'
 class WeightsController < ApplicationController
   before_filter :authorize
+  cattr_reader :per_page
+  @@per_page = 10
  
       
   # GET /weights
@@ -14,6 +16,10 @@ class WeightsController < ApplicationController
       start_date=start_date- 12*ONE_MONTH
       end_date =Time.now
       @weights = Weight.find_for_user_for_interval session[:user_id],start_date,end_date
+      @weights_pag =Weight.find_for_user_for_interval(session[:user_id],start_date,end_date).paginate(:page => params[:page],:per_page   => 10)
+      
+
+       
       create_chart unless (@weights==nil or @weights.empty?)
     end
     

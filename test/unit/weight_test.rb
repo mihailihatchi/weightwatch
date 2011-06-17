@@ -17,7 +17,7 @@ class WeightTest < ActiveSupport::TestCase
     user_id=1;
     @weights =Weight.find_for_user_for_interval user_id,Time.local(2010,01,01),Time.new;
     
-    assert_equal @weights.length, 2
+    assert_equal @weights.length, 1
   end
   def test_compare
     @weight1 = Weight.new

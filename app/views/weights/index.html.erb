@@ -16,17 +16,18 @@
     <th class="tableHeader" colspan="3">Actions</th>
   </tr>
 <% end %>
-<% @weights.each do |weight| %>
-  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-    <td class="datatable""><%=h weight.weight %></td>
-    <!--td><%=h weight.id %></td-->
+<% will_paginate @weights_pag %>
+<%  @weights_pag.each do |weight| %>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even')%>" >
+    <td class="datatable"><%=h weight.weight %></td>    
     <td class="datatable"><%=h weight.weighting_date %></td>
     <td class="datatable"><%=h weight.user.username unless weight.user==nil %></td>
     <td class="actionCol"><%= link_to 'Show', weight %></td>
     <td class="actionCol"><%= link_to 'Edit', edit_weight_path(weight) %></td>
     <td class="actionCol"><%= link_to 'Destroy', weight, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
-<% end %>
+<% end %>  
+  <%= page_entries_info @weights_pag %>
 </table>
 
 
