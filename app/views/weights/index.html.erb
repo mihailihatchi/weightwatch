@@ -28,6 +28,8 @@
   </tr>
 <% end %>  
   <%= page_entries_info @weights_pag %>
+  <%= link_to 'Previous page', { :page => @weights_pag.previous_page } if @weights_pag.previous_page %>
+<%= link_to 'Next page', { :page => @weights_pag.next_page } if @weights_pag.next_page %>
 </table>
 
 
