@@ -16,7 +16,7 @@ class WeightsController < ApplicationController
       start_date=start_date- 12*ONE_MONTH
       end_date =Time.now
       @weights = Weight.find_for_user_for_interval session[:user_id],start_date,end_date
-      @weights_pag =Weight.find_for_user_for_interval(session[:user_id],start_date,end_date).paginate(:page => params[:page],:per_page   => 10)
+      @weights_pag =Weight.find_for_user_for_interval_with_order(session[:user_id],start_date,end_date,'weighting_date desc').paginate(:page => params[:page],:per_page   => 10)
       
 
        

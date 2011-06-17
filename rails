@@ -12125,4 +12125,1361 @@ Completed 200 OK in 47ms (Views: 6.4ms | ActiveRecord: 0.4ms)
 
 Started GET "/weights" for 78.96.200.133 at Fri Jun 17 11:19:37 +0300 2011
   Processing by WeightsController#index as HTML
-  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE 
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mWeight Load (0.1ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.7ms)
+Rendered weights/index.html.erb within layouts/weights (50.9ms)
+Completed 200 OK in 72ms (Views: 52.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/weights?page=2" for 78.96.200.133 at Fri Jun 17 13:17:30 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mWeight Load (0.1ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Rendered login/_current_user.rhtml (0.9ms)
+Rendered layouts/_menu.rhtml (38.1ms)
+Rendered weights/index.html.erb within layouts/weights (55.1ms)
+Completed 200 OK in 77ms (Views: 56.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/weights/new" for 127.0.0.1 at Fri Jun 17 22:37:11 +0300 2011
+  Processing by WeightsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+DEPRECATION WARNING: f.error_messages was removed from Rails and is now available as a plugin. Please install it with `rails plugin install git://github.com/rails/dynamic_form.git`. (called from _app_views_weights_new_html_erb___1792331983_69905486477720_0 at /home/mihai/projects/weightwatch/app/views/weights/new.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_weights_new_html_erb___1792331983_69905486477720_0 at /home/mihai/projects/weightwatch/app/views/weights/new.html.erb:3)
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.7ms)
+Rendered weights/new.html.erb within layouts/weights (9.6ms)
+Completed 200 OK in 36ms (Views: 22.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/weights" for 127.0.0.1 at Fri Jun 17 22:37:26 +0300 2011
+  Processing by WeightsController#create as HTML
+  Parameters: {"commit"=>"Create", "weight"=>{"weight"=>"111.3", "weighting_date(1i)"=>"2011", "weighting_date(2i)"=>"6", "weighting_date(3i)"=>"17"}, "authenticity_token"=>"2ycYIoUd/VLzKrjfuABZWuFdhAi3Kx2vo0M1jdVT6hU=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  describe `weights`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `weights` (`user_id`, `weight`, `weighting_date`) VALUES (980190964, 111.3, '2011-06-17 00:00:00')[0m
+  [1m[35mSQL (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/weights/980191081
+Completed 302 Found in 79ms
+
+
+Started GET "/weights/980191081" for 127.0.0.1 at Fri Jun 17 22:37:26 +0300 2011
+  Processing by WeightsController#show as HTML
+  Parameters: {"id"=>"980191081"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mWeight Load (0.3ms)[0m  SELECT `weights`.* FROM `weights` WHERE (`weights`.`id` = 980191081) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.6ms)
+Rendered weights/show.html.erb within layouts/weights (13.5ms)
+Completed 200 OK in 31ms (Views: 16.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/weights" for 127.0.0.1 at Fri Jun 17 22:37:28 +0300 2011
+  Processing by WeightsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mWeight Load (0.5ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.8ms)
+Rendered weights/index.html.erb within layouts/weights (20.6ms)
+Completed 200 OK in 44ms (Views: 22.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/weights?page=2" for 127.0.0.1 at Fri Jun 17 22:37:42 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mWeight Load (0.1ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.7ms)
+Rendered weights/index.html.erb within layouts/weights (20.6ms)
+Completed 200 OK in 80ms (Views: 22.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/weights?page=1" for 127.0.0.1 at Fri Jun 17 22:37:43 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mWeight Load (0.1ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (2.0ms)
+Rendered weights/index.html.erb within layouts/weights (59.0ms)
+Completed 200 OK in 81ms (Views: 60.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/weights?page=2" for 127.0.0.1 at Fri Jun 17 22:37:44 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mWeight Load (0.1ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.8ms)
+Rendered weights/index.html.erb within layouts/weights (59.7ms)
+Completed 200 OK in 81ms (Views: 61.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/weights?page=3" for 127.0.0.1 at Fri Jun 17 22:37:45 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mWeight Load (0.1ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+Rendered login/_current_user.rhtml (0.2ms)
+Rendered layouts/_menu.rhtml (1.6ms)
+Rendered weights/index.html.erb within layouts/weights (19.6ms)
+Completed 200 OK in 42ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/weights?page=4" for 127.0.0.1 at Fri Jun 17 22:37:46 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mWeight Load (0.2ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.7ms)
+Rendered weights/index.html.erb within layouts/weights (19.4ms)
+Completed 200 OK in 42ms (Views: 21.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/weights?page=5" for 127.0.0.1 at Fri Jun 17 22:37:47 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mWeight Load (0.2ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.8ms)
+Rendered weights/index.html.erb within layouts/weights (19.1ms)
+Completed 200 OK in 49ms (Views: 21.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/weights?page=6" for 127.0.0.1 at Fri Jun 17 22:37:47 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mWeight Load (0.1ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.6ms)
+Rendered weights/index.html.erb within layouts/weights (19.9ms)
+Completed 200 OK in 77ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/weights?page=7" for 127.0.0.1 at Fri Jun 17 22:37:48 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"7"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mWeight Load (0.1ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (2.1ms)
+Rendered weights/index.html.erb within layouts/weights (20.5ms)
+Completed 200 OK in 78ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/weights?page=8" for 127.0.0.1 at Fri Jun 17 22:37:48 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mWeight Load (0.1ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.8ms)
+Rendered weights/index.html.erb within layouts/weights (56.4ms)
+Completed 200 OK in 78ms (Views: 58.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/weights?page=9" for 127.0.0.1 at Fri Jun 17 22:37:49 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mWeight Load (0.1ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.6ms)
+Rendered weights/index.html.erb within layouts/weights (12.5ms)
+Completed 200 OK in 34ms (Views: 14.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/weights?page=9" for 127.0.0.1 at Fri Jun 17 22:41:35 +0300 2011
+
+SyntaxError (/home/mihai/projects/weightwatch/app/controllers/weights_controller.rb:19: syntax error, unexpected ')', expecting tASSOC):
+  activesupport (3.0.1) lib/active_support/dependencies.rb:454:in `load'
+  activesupport (3.0.1) lib/active_support/dependencies.rb:454:in `load_file'
+  activesupport (3.0.1) lib/active_support/dependencies.rb:591:in `new_constants_in'
+  activesupport (3.0.1) lib/active_support/dependencies.rb:453:in `load_file'
+  activesupport (3.0.1) lib/active_support/dependencies.rb:340:in `require_or_load'
+  activesupport (3.0.1) lib/active_support/dependencies.rb:491:in `load_missing_constant'
+  activesupport (3.0.1) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (3.0.1) lib/active_support/dependencies.rb:181:in `each'
+  activesupport (3.0.1) lib/active_support/dependencies.rb:181:in `const_missing'
+  activesupport (3.0.1) lib/active_support/inflector/methods.rb:113:in `constantize'
+  activesupport (3.0.1) lib/active_support/inflector/methods.rb:112:in `each'
+  activesupport (3.0.1) lib/active_support/inflector/methods.rb:112:in `constantize'
+  activesupport (3.0.1) lib/active_support/dependencies.rb:523
+  activesupport (3.0.1) lib/active_support/dependencies.rb:533:in `call'
+  activesupport (3.0.1) lib/active_support/dependencies.rb:533:in `default'
+  activesupport (3.0.1) lib/active_support/dependencies.rb:533:in `[]'
+  activesupport (3.0.1) lib/active_support/dependencies.rb:533:in `get'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:58:in `controller_reference'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:23:in `call'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:148:in `call'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:93:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:68:in `optimized_each'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:92:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:139:in `call'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:492:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  rack (1.2.1) lib/rack/methodoverride.rb:24:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/flash.rb:182:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/cookies.rb:287:in `call'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:32:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:12:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:31:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+  rack (1.2.1) lib/rack/sendfile.rb:107:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+  railties (3.0.1) lib/rails/rack/logger.rb:13:in `call'
+  rack (1.2.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.0.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `synchronize'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/static.rb:30:in `call'
+  railties (3.0.1) lib/rails/application.rb:168:in `call'
+  railties (3.0.1) lib/rails/application.rb:77:in `send'
+  railties (3.0.1) lib/rails/application.rb:77:in `method_missing'
+  railties (3.0.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.2.1) lib/rack/content_length.rb:13:in `call'
+  rack (1.2.1) lib/rack/handler/webrick.rb:52:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.2.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.2.1) lib/rack/server.rb:213:in `start'
+  railties (3.0.1) lib/rails/commands/server.rb:65:in `start'
+  railties (3.0.1) lib/rails/commands.rb:30
+  railties (3.0.1) lib/rails/commands.rb:27:in `tap'
+  railties (3.0.1) lib/rails/commands.rb:27
+  script/rails:6:in `require'
+  script/rails:6
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.0ms)
+
+
+Started GET "/weights?page=9" for 127.0.0.1 at Fri Jun 17 22:41:59 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+Completed   in 12ms
+
+ArgumentError (wrong number of arguments (3 for 4)):
+  app/controllers/weights_controller.rb:18:in `find_for_user_for_interval'
+  app/controllers/weights_controller.rb:18:in `index'
+  actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.0.1) lib/abstract_controller/base.rb:150:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/rendering.rb:11:in `process_action'
+  actionpack (3.0.1) lib/abstract_controller/callbacks.rb:18:in `process_action'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:440:in `_run__1526871743__process_action__199225275__callbacks'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `send'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `send'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `run_callbacks'
+  actionpack (3.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+  activesupport (3.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+  actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/rescue.rb:17:in `process_action'
+  actionpack (3.0.1) lib/abstract_controller/base.rb:119:in `process'
+  actionpack (3.0.1) lib/abstract_controller/rendering.rb:40:in `process'
+  actionpack (3.0.1) lib/action_controller/metal.rb:133:in `dispatch'
+  actionpack (3.0.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.0.1) lib/action_controller/metal.rb:173:in `action'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `call'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:27:in `call'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:148:in `call'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:93:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:68:in `optimized_each'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:92:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:139:in `call'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:492:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  rack (1.2.1) lib/rack/methodoverride.rb:24:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/flash.rb:182:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/cookies.rb:287:in `call'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:32:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:12:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:31:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+  rack (1.2.1) lib/rack/sendfile.rb:107:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+  railties (3.0.1) lib/rails/rack/logger.rb:13:in `call'
+  rack (1.2.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.0.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `synchronize'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/static.rb:30:in `call'
+  railties (3.0.1) lib/rails/application.rb:168:in `call'
+  railties (3.0.1) lib/rails/application.rb:77:in `send'
+  railties (3.0.1) lib/rails/application.rb:77:in `method_missing'
+  railties (3.0.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.2.1) lib/rack/content_length.rb:13:in `call'
+  rack (1.2.1) lib/rack/handler/webrick.rb:52:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.2.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.2.1) lib/rack/server.rb:213:in `start'
+  railties (3.0.1) lib/rails/commands/server.rb:65:in `start'
+  railties (3.0.1) lib/rails/commands.rb:30
+  railties (3.0.1) lib/rails/commands.rb:27:in `tap'
+  railties (3.0.1) lib/rails/commands.rb:27
+  script/rails:6:in `require'
+  script/rails:6
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started GET "/weights?page=9" for 127.0.0.1 at Fri Jun 17 22:42:20 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"9"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Completed   in 56ms
+
+ArgumentError (wrong number of arguments (3 for 4)):
+  app/controllers/weights_controller.rb:18:in `find_for_user_for_interval'
+  app/controllers/weights_controller.rb:18:in `index'
+  actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.0.1) lib/abstract_controller/base.rb:150:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/rendering.rb:11:in `process_action'
+  actionpack (3.0.1) lib/abstract_controller/callbacks.rb:18:in `process_action'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:440:in `_run__1526871743__process_action__199225275__callbacks'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `send'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `send'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `run_callbacks'
+  actionpack (3.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+  activesupport (3.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+  actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/rescue.rb:17:in `process_action'
+  actionpack (3.0.1) lib/abstract_controller/base.rb:119:in `process'
+  actionpack (3.0.1) lib/abstract_controller/rendering.rb:40:in `process'
+  actionpack (3.0.1) lib/action_controller/metal.rb:133:in `dispatch'
+  actionpack (3.0.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.0.1) lib/action_controller/metal.rb:173:in `action'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `call'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:27:in `call'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:148:in `call'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:93:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:68:in `optimized_each'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:92:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:139:in `call'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:492:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  rack (1.2.1) lib/rack/methodoverride.rb:24:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/flash.rb:182:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/cookies.rb:287:in `call'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:32:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:12:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:31:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+  rack (1.2.1) lib/rack/sendfile.rb:107:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+  railties (3.0.1) lib/rails/rack/logger.rb:13:in `call'
+  rack (1.2.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.0.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `synchronize'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/static.rb:30:in `call'
+  railties (3.0.1) lib/rails/application.rb:168:in `call'
+  railties (3.0.1) lib/rails/application.rb:77:in `send'
+  railties (3.0.1) lib/rails/application.rb:77:in `method_missing'
+  railties (3.0.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.2.1) lib/rack/content_length.rb:13:in `call'
+  rack (1.2.1) lib/rack/handler/webrick.rb:52:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.2.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.2.1) lib/rack/server.rb:213:in `start'
+  railties (3.0.1) lib/rails/commands/server.rb:65:in `start'
+  railties (3.0.1) lib/rails/commands.rb:30
+  railties (3.0.1) lib/rails/commands.rb:27:in `tap'
+  railties (3.0.1) lib/rails/commands.rb:27
+  script/rails:6:in `require'
+  script/rails:6
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.8ms)
+
+
+Started GET "/weights?page=9" for 127.0.0.1 at Fri Jun 17 22:42:23 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+Completed   in 12ms
+
+ArgumentError (wrong number of arguments (3 for 4)):
+  app/controllers/weights_controller.rb:18:in `find_for_user_for_interval'
+  app/controllers/weights_controller.rb:18:in `index'
+  actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.0.1) lib/abstract_controller/base.rb:150:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/rendering.rb:11:in `process_action'
+  actionpack (3.0.1) lib/abstract_controller/callbacks.rb:18:in `process_action'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:440:in `_run__1526871743__process_action__199225275__callbacks'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `send'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `send'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `run_callbacks'
+  actionpack (3.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+  activesupport (3.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+  actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/rescue.rb:17:in `process_action'
+  actionpack (3.0.1) lib/abstract_controller/base.rb:119:in `process'
+  actionpack (3.0.1) lib/abstract_controller/rendering.rb:40:in `process'
+  actionpack (3.0.1) lib/action_controller/metal.rb:133:in `dispatch'
+  actionpack (3.0.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.0.1) lib/action_controller/metal.rb:173:in `action'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `call'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:27:in `call'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:148:in `call'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:93:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:68:in `optimized_each'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:92:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:139:in `call'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:492:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  rack (1.2.1) lib/rack/methodoverride.rb:24:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/flash.rb:182:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/cookies.rb:287:in `call'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:32:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:12:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:31:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+  rack (1.2.1) lib/rack/sendfile.rb:107:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+  railties (3.0.1) lib/rails/rack/logger.rb:13:in `call'
+  rack (1.2.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.0.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `synchronize'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/static.rb:30:in `call'
+  railties (3.0.1) lib/rails/application.rb:168:in `call'
+  railties (3.0.1) lib/rails/application.rb:77:in `send'
+  railties (3.0.1) lib/rails/application.rb:77:in `method_missing'
+  railties (3.0.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.2.1) lib/rack/content_length.rb:13:in `call'
+  rack (1.2.1) lib/rack/handler/webrick.rb:52:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.2.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.2.1) lib/rack/server.rb:213:in `start'
+  railties (3.0.1) lib/rails/commands/server.rb:65:in `start'
+  railties (3.0.1) lib/rails/commands.rb:30
+  railties (3.0.1) lib/rails/commands.rb:27:in `tap'
+  railties (3.0.1) lib/rails/commands.rb:27
+  script/rails:6:in `require'
+  script/rails:6
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.6ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.4ms)
+
+
+Started GET "/weights?page=9" for 127.0.0.1 at Fri Jun 17 22:42:23 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Completed   in 12ms
+
+ArgumentError (wrong number of arguments (3 for 4)):
+  app/controllers/weights_controller.rb:18:in `find_for_user_for_interval'
+  app/controllers/weights_controller.rb:18:in `index'
+  actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.0.1) lib/abstract_controller/base.rb:150:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/rendering.rb:11:in `process_action'
+  actionpack (3.0.1) lib/abstract_controller/callbacks.rb:18:in `process_action'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:440:in `_run__1526871743__process_action__199225275__callbacks'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `send'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `send'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `run_callbacks'
+  actionpack (3.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+  activesupport (3.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+  actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/rescue.rb:17:in `process_action'
+  actionpack (3.0.1) lib/abstract_controller/base.rb:119:in `process'
+  actionpack (3.0.1) lib/abstract_controller/rendering.rb:40:in `process'
+  actionpack (3.0.1) lib/action_controller/metal.rb:133:in `dispatch'
+  actionpack (3.0.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.0.1) lib/action_controller/metal.rb:173:in `action'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `call'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:27:in `call'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:148:in `call'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:93:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:68:in `optimized_each'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:92:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:139:in `call'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:492:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  rack (1.2.1) lib/rack/methodoverride.rb:24:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/flash.rb:182:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/cookies.rb:287:in `call'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:32:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:12:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:31:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+  rack (1.2.1) lib/rack/sendfile.rb:107:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+  railties (3.0.1) lib/rails/rack/logger.rb:13:in `call'
+  rack (1.2.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.0.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `synchronize'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/static.rb:30:in `call'
+  railties (3.0.1) lib/rails/application.rb:168:in `call'
+  railties (3.0.1) lib/rails/application.rb:77:in `send'
+  railties (3.0.1) lib/rails/application.rb:77:in `method_missing'
+  railties (3.0.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.2.1) lib/rack/content_length.rb:13:in `call'
+  rack (1.2.1) lib/rack/handler/webrick.rb:52:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.2.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.2.1) lib/rack/server.rb:213:in `start'
+  railties (3.0.1) lib/rails/commands/server.rb:65:in `start'
+  railties (3.0.1) lib/rails/commands.rb:30
+  railties (3.0.1) lib/rails/commands.rb:27:in `tap'
+  railties (3.0.1) lib/rails/commands.rb:27
+  script/rails:6:in `require'
+  script/rails:6
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.8ms)
+
+
+Started GET "/weights?page=9" for 127.0.0.1 at Fri Jun 17 22:42:24 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+Completed   in 12ms
+
+ArgumentError (wrong number of arguments (3 for 4)):
+  app/controllers/weights_controller.rb:18:in `find_for_user_for_interval'
+  app/controllers/weights_controller.rb:18:in `index'
+  actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.0.1) lib/abstract_controller/base.rb:150:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/rendering.rb:11:in `process_action'
+  actionpack (3.0.1) lib/abstract_controller/callbacks.rb:18:in `process_action'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:440:in `_run__1526871743__process_action__199225275__callbacks'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `send'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `send'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `run_callbacks'
+  actionpack (3.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+  activesupport (3.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+  actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/rescue.rb:17:in `process_action'
+  actionpack (3.0.1) lib/abstract_controller/base.rb:119:in `process'
+  actionpack (3.0.1) lib/abstract_controller/rendering.rb:40:in `process'
+  actionpack (3.0.1) lib/action_controller/metal.rb:133:in `dispatch'
+  actionpack (3.0.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.0.1) lib/action_controller/metal.rb:173:in `action'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `call'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:27:in `call'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:148:in `call'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:93:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:68:in `optimized_each'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:92:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:139:in `call'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:492:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  rack (1.2.1) lib/rack/methodoverride.rb:24:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/flash.rb:182:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/cookies.rb:287:in `call'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:32:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:12:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:31:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+  rack (1.2.1) lib/rack/sendfile.rb:107:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+  railties (3.0.1) lib/rails/rack/logger.rb:13:in `call'
+  rack (1.2.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.0.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `synchronize'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/static.rb:30:in `call'
+  railties (3.0.1) lib/rails/application.rb:168:in `call'
+  railties (3.0.1) lib/rails/application.rb:77:in `send'
+  railties (3.0.1) lib/rails/application.rb:77:in `method_missing'
+  railties (3.0.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.2.1) lib/rack/content_length.rb:13:in `call'
+  rack (1.2.1) lib/rack/handler/webrick.rb:52:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.2.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.2.1) lib/rack/server.rb:213:in `start'
+  railties (3.0.1) lib/rails/commands/server.rb:65:in `start'
+  railties (3.0.1) lib/rails/commands.rb:30
+  railties (3.0.1) lib/rails/commands.rb:27:in `tap'
+  railties (3.0.1) lib/rails/commands.rb:27
+  script/rails:6:in `require'
+  script/rails:6
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (37.1ms)
+
+
+Started GET "/weights?page=9" for 127.0.0.1 at Fri Jun 17 22:42:24 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Completed   in 13ms
+
+ArgumentError (wrong number of arguments (3 for 4)):
+  app/controllers/weights_controller.rb:18:in `find_for_user_for_interval'
+  app/controllers/weights_controller.rb:18:in `index'
+  actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.0.1) lib/abstract_controller/base.rb:150:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/rendering.rb:11:in `process_action'
+  actionpack (3.0.1) lib/abstract_controller/callbacks.rb:18:in `process_action'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:440:in `_run__1526871743__process_action__199225275__callbacks'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `send'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `send'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `run_callbacks'
+  actionpack (3.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+  activesupport (3.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+  actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/rescue.rb:17:in `process_action'
+  actionpack (3.0.1) lib/abstract_controller/base.rb:119:in `process'
+  actionpack (3.0.1) lib/abstract_controller/rendering.rb:40:in `process'
+  actionpack (3.0.1) lib/action_controller/metal.rb:133:in `dispatch'
+  actionpack (3.0.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.0.1) lib/action_controller/metal.rb:173:in `action'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `call'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:27:in `call'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:148:in `call'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:93:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:68:in `optimized_each'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:92:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:139:in `call'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:492:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  rack (1.2.1) lib/rack/methodoverride.rb:24:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/flash.rb:182:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/cookies.rb:287:in `call'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:32:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:12:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:31:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+  rack (1.2.1) lib/rack/sendfile.rb:107:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+  railties (3.0.1) lib/rails/rack/logger.rb:13:in `call'
+  rack (1.2.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.0.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `synchronize'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/static.rb:30:in `call'
+  railties (3.0.1) lib/rails/application.rb:168:in `call'
+  railties (3.0.1) lib/rails/application.rb:77:in `send'
+  railties (3.0.1) lib/rails/application.rb:77:in `method_missing'
+  railties (3.0.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.2.1) lib/rack/content_length.rb:13:in `call'
+  rack (1.2.1) lib/rack/handler/webrick.rb:52:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.2.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.2.1) lib/rack/server.rb:213:in `start'
+  railties (3.0.1) lib/rails/commands/server.rb:65:in `start'
+  railties (3.0.1) lib/rails/commands.rb:30
+  railties (3.0.1) lib/rails/commands.rb:27:in `tap'
+  railties (3.0.1) lib/rails/commands.rb:27
+  script/rails:6:in `require'
+  script/rails:6
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.9ms)
+
+
+Started GET "/weights?page=9" for 127.0.0.1 at Fri Jun 17 22:42:24 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+Completed   in 44ms
+
+ArgumentError (wrong number of arguments (3 for 4)):
+  app/controllers/weights_controller.rb:18:in `find_for_user_for_interval'
+  app/controllers/weights_controller.rb:18:in `index'
+  actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.0.1) lib/abstract_controller/base.rb:150:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/rendering.rb:11:in `process_action'
+  actionpack (3.0.1) lib/abstract_controller/callbacks.rb:18:in `process_action'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:440:in `_run__1526871743__process_action__199225275__callbacks'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `send'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `send'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `run_callbacks'
+  actionpack (3.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+  activesupport (3.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+  actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/rescue.rb:17:in `process_action'
+  actionpack (3.0.1) lib/abstract_controller/base.rb:119:in `process'
+  actionpack (3.0.1) lib/abstract_controller/rendering.rb:40:in `process'
+  actionpack (3.0.1) lib/action_controller/metal.rb:133:in `dispatch'
+  actionpack (3.0.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.0.1) lib/action_controller/metal.rb:173:in `action'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `call'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:27:in `call'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:148:in `call'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:93:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:68:in `optimized_each'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:92:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:139:in `call'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:492:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  rack (1.2.1) lib/rack/methodoverride.rb:24:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/flash.rb:182:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/cookies.rb:287:in `call'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:32:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:12:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:31:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+  rack (1.2.1) lib/rack/sendfile.rb:107:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+  railties (3.0.1) lib/rails/rack/logger.rb:13:in `call'
+  rack (1.2.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.0.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `synchronize'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/static.rb:30:in `call'
+  railties (3.0.1) lib/rails/application.rb:168:in `call'
+  railties (3.0.1) lib/rails/application.rb:77:in `send'
+  railties (3.0.1) lib/rails/application.rb:77:in `method_missing'
+  railties (3.0.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.2.1) lib/rack/content_length.rb:13:in `call'
+  rack (1.2.1) lib/rack/handler/webrick.rb:52:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.2.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.2.1) lib/rack/server.rb:213:in `start'
+  railties (3.0.1) lib/rails/commands/server.rb:65:in `start'
+  railties (3.0.1) lib/rails/commands.rb:30
+  railties (3.0.1) lib/rails/commands.rb:27:in `tap'
+  railties (3.0.1) lib/rails/commands.rb:27
+  script/rails:6:in `require'
+  script/rails:6
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.6ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.4ms)
+
+
+Started GET "/weights?page=9" for 127.0.0.1 at Fri Jun 17 22:42:25 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Completed   in 12ms
+
+ArgumentError (wrong number of arguments (3 for 4)):
+  app/controllers/weights_controller.rb:18:in `find_for_user_for_interval'
+  app/controllers/weights_controller.rb:18:in `index'
+  actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.0.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.0.1) lib/abstract_controller/base.rb:150:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/rendering.rb:11:in `process_action'
+  actionpack (3.0.1) lib/abstract_controller/callbacks.rb:18:in `process_action'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:440:in `_run__1526871743__process_action__199225275__callbacks'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `send'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `send'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:93:in `run_callbacks'
+  actionpack (3.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+  activesupport (3.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (3.0.1) lib/active_support/notifications.rb:52:in `instrument'
+  actionpack (3.0.1) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.0.1) lib/action_controller/metal/rescue.rb:17:in `process_action'
+  actionpack (3.0.1) lib/abstract_controller/base.rb:119:in `process'
+  actionpack (3.0.1) lib/abstract_controller/rendering.rb:40:in `process'
+  actionpack (3.0.1) lib/action_controller/metal.rb:133:in `dispatch'
+  actionpack (3.0.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.0.1) lib/action_controller/metal.rb:173:in `action'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `call'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:27:in `call'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:148:in `call'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:93:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:68:in `optimized_each'
+  rack-mount (0.6.14) lib/rack/mount/code_generation.rb:92:in `recognize'
+  rack-mount (0.6.14) lib/rack/mount/route_set.rb:139:in `call'
+  actionpack (3.0.1) lib/action_dispatch/routing/route_set.rb:492:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+  rack (1.2.1) lib/rack/methodoverride.rb:24:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/flash.rb:182:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/cookies.rb:287:in `call'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:32:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:12:in `cache'
+  activerecord (3.0.1) lib/active_record/query_cache.rb:31:in `call'
+  activerecord (3.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+  activesupport (3.0.1) lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+  actionpack (3.0.1) lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+  rack (1.2.1) lib/rack/sendfile.rb:107:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+  railties (3.0.1) lib/rails/rack/logger.rb:13:in `call'
+  rack (1.2.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.0.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  rack (1.2.1) lib/rack/lock.rb:11:in `synchronize'
+  rack (1.2.1) lib/rack/lock.rb:11:in `call'
+  actionpack (3.0.1) lib/action_dispatch/middleware/static.rb:30:in `call'
+  railties (3.0.1) lib/rails/application.rb:168:in `call'
+  railties (3.0.1) lib/rails/application.rb:77:in `send'
+  railties (3.0.1) lib/rails/application.rb:77:in `method_missing'
+  railties (3.0.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.2.1) lib/rack/content_length.rb:13:in `call'
+  rack (1.2.1) lib/rack/handler/webrick.rb:52:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  rack (1.2.1) lib/rack/handler/webrick.rb:13:in `run'
+  rack (1.2.1) lib/rack/server.rb:213:in `start'
+  railties (3.0.1) lib/rails/commands/server.rb:65:in `start'
+  railties (3.0.1) lib/rails/commands.rb:30
+  railties (3.0.1) lib/rails/commands.rb:27:in `tap'
+  railties (3.0.1) lib/rails/commands.rb:27
+  script/rails:6:in `require'
+  script/rails:6
+
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.6ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /var/lib/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.5ms)
+
+
+Started GET "/weights?page=9" for 127.0.0.1 at Fri Jun 17 22:44:50 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mWeight Load (0.1ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mWeight Load (0.5ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date desc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.7ms)
+Rendered weights/index.html.erb within layouts/weights (13.3ms)
+Completed 200 OK in 37ms (Views: 15.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/weights?page=8" for 127.0.0.1 at Fri Jun 17 22:45:00 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"8"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mWeight Load (0.1ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mWeight Load (0.1ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date desc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.7ms)
+Rendered weights/index.html.erb within layouts/weights (20.7ms)
+Completed 200 OK in 77ms (Views: 56.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/weights?page=8" for 127.0.0.1 at Fri Jun 17 22:45:16 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mWeight Load (0.1ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.8ms)
+Rendered weights/index.html.erb within layouts/weights (57.3ms)
+Completed 200 OK in 79ms (Views: 59.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/weights?page=9" for 127.0.0.1 at Fri Jun 17 22:45:22 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"9"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mWeight Load (0.1ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.5ms)
+Rendered weights/index.html.erb within layouts/weights (12.6ms)
+Completed 200 OK in 35ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/weights" for 127.0.0.1 at Fri Jun 17 22:45:28 +0300 2011
+  Processing by WeightsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mWeight Load (0.1ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.6ms)
+Rendered weights/index.html.erb within layouts/weights (19.3ms)
+Completed 200 OK in 42ms (Views: 21.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/weights" for 127.0.0.1 at Fri Jun 17 22:45:41 +0300 2011
+  Processing by WeightsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mWeight Load (0.2ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mWeight Load (0.1ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date desc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Rendered login/_current_user.rhtml (0.4ms)
+Rendered layouts/_menu.rhtml (2.7ms)
+Rendered weights/index.html.erb within layouts/weights (31.2ms)
+Completed 200 OK in 66ms (Views: 34.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/weights?page=2" for 127.0.0.1 at Fri Jun 17 22:46:34 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mWeight Load (0.2ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mWeight Load (0.2ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date desc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.7ms)
+Rendered weights/index.html.erb within layouts/weights (19.7ms)
+Completed 200 OK in 86ms (Views: 21.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/weights?page=3" for 127.0.0.1 at Fri Jun 17 22:46:39 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mWeight Load (0.2ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mWeight Load (0.1ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date desc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.7ms)
+Rendered weights/index.html.erb within layouts/weights (55.2ms)
+Completed 200 OK in 78ms (Views: 56.9ms | ActiveRecord: 0.5ms)
+DEPRECATION WARNING: ActionController::Base.cookie_verifier_secret= is deprecated. Please configure it on your application with config.secret_token=. (called from /home/mihai/projects/weightwatch/config/initializers/cookie_verification_secret.rb:7)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from /home/mihai/projects/weightwatch/config/routes.rb:1)
+
+
+Started GET "/weights?page=3" for 127.0.0.1 at Fri Jun 17 22:47:48 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mWeight Load (0.2ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc[0m
+  [1m[35mWeight Load (0.2ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date desc
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+Rendered login/_current_user.rhtml (0.3ms)
+Rendered layouts/_menu.rhtml (1.9ms)
+Rendered weights/index.html.erb within layouts/weights (62.2ms)
+Completed 200 OK in 86ms (Views: 63.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/weights?page=3" for 127.0.0.1 at Fri Jun 17 22:47:50 +0300 2011
+  Processing by WeightsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mWeight Load (2.6ms)[0m  SELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date asc
+  [1m[36mWeight Load (0.2ms)[0m  [1mSELECT `weights`.* FROM `weights` WHERE (user_id=980190964 and weighting_date between '2010-06-10' and '2011-06-17') ORDER BY weighting_date desc[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 980190964) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`user
