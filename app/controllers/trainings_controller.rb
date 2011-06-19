@@ -42,7 +42,10 @@ class TrainingsController < ApplicationController
       format.xml  { head :ok }
     end
   end
-
+=begin rdoc
+this method loads the
+current training
+=end
   def show
     @training = Training.find(params[:id])
     respond_to do |format|

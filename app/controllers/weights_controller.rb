@@ -11,18 +11,23 @@ class WeightsController < ApplicationController
     @role=session[:user_role]
     if @role=='admin'
       @weights = Weight.all
+      @weights_pag=@weights.paginate(:page => params[:page],:per_page   => @@per_page)
     else
       start_date=Time.now
       start_date=start_date- 12*ONE_MONTH
       end_date =Time.now
       @weights = Weight.find_for_user_for_interval session[:user_id],start_date,end_date
-      @weights_pag =Weight.find_for_user_for_interval_with_order(session[:user_id],start_date,end_date,'weighting_date desc').paginate(:page => params[:page],:per_page   => 10)
       
+      @weights_pag =Weight.find_for_user_for_interval_with_order(session[:user_id],start_date,end_date,'weighting_date desc').paginate(:page => params[:page],:per_page   => @@per_page)
+      
+
 
        
       create_chart unless (@weights==nil or @weights.empty?)
     end
-    
+    #find last page
+    @last_page = @weights.size/@@per_page if @weights.size%@@per_page==0
+    @last_page = @weights.size/@@per_page+1 unless @weights.size%@@per_page==0
 
     respond_to do |format|
       format.html # index.html.erb
@@ -52,6 +57,11 @@ class WeightsController < ApplicationController
       format.xml  { render :xml => @weight }
     end
   end
+=begin rdoc
+This method creates the chart using the
+weights passed
+
+=end
   def create_chart
     @data =[];
     @time_labels=[]

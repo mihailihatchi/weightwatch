@@ -24,12 +24,19 @@
     <td class="datatable"><%=h weight.user.username unless weight.user==nil %></td>
     <td class="actionCol"><%= link_to 'Show', weight %></td>
     <td class="actionCol"><%= link_to 'Edit', edit_weight_path(weight) %></td>
-    <td class="actionCol"><%= link_to 'Destroy', weight, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="actionCol"><%= link_to 'Delete', weight, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>  
-  <%= page_entries_info @weights_pag %>
+  <%= page_entries_info @weights_pag %><br/>
+  <%= link_to 'First page', { :page => 1 }  %>
+  <b>    </b>
   <%= link_to 'Previous page', { :page => @weights_pag.previous_page } if @weights_pag.previous_page %>
+  <b>    </b>
 <%= link_to 'Next page', { :page => @weights_pag.next_page } if @weights_pag.next_page %>
+  <b>    </b>
+<%= link_to 'Last page', { :page => @last_page}  %>
+  <b>    </b>
+
 </table>
 
 
