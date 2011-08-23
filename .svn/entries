@@ -78,9 +78,6 @@ dir
 spec
 dir
 
-vendor
-dir
-
 README
 file
 
@@ -114,6 +111,9 @@ edi
 
 
 10011
+
+vendor
+dir
 
 Gemfile.lock
 file
@@ -155,10 +155,10 @@ dir
 script
 dir
 
-config
+doc
 dir
 
-doc
+config
 dir
 
 lib
